@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+    .font1 {
+        color: red;
+    }
+}
+
+@media (min-width: 768px) {
+    .font1 {
+        color: black;
+    }
+}
+
+@media (min-width: 992px) {
+    .font1 {
+        color: orange;
+    }
+}
+
+@media (min-width: 1200px) {
+    .font1 {
+        color: yellow;
+    }
+}
