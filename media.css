@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+    .font1 {
+        color: blue;
+    }
+}
+
+@media (min-width: 768px) {
+    .font1 {
+        color: #0d1d02;
+    }
+}
+
+@media (min-width: 992px) {
+    .font1 {
+        color: #fa1172;
+    }
+}
+
+@media (min-width: 1200px) {
+    .font1 {
+        color: #098a9b;
+    }
+}
