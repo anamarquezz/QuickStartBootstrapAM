@@ -1,0 +1,27 @@
+@media (min-width: 576px) {
+    .font1{
+        color:royalblue;
+    }
+  }
+  
+
+  @media (min-width: 768px) {
+     .font1{
+        color:palevioletred;
+    }
+  }
+  
+
+  @media (min-width: 992px) {
+    .font1{
+        color:teal;
+  
+    }
+  }
+  
+ 
+  @media (min-width: 1200px) {
+    .font1{
+        color:gold;
+    }
+  }
