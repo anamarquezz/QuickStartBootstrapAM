@@ -2,6 +2,10 @@
     .font1{
         color:royalblue;
     }
+
+    .bannerresponsive{
+      width: 80%;
+    }
   }
   
 
@@ -9,13 +13,18 @@
      .font1{
         color:palevioletred;
     }
+    .bannerresponsive{
+      width: 100%;
+    }
   }
   
 
   @media (min-width: 992px) {
     .font1{
-        color:teal;
-  
+        color:teal;  
+    }
+    .bannerresponsive{
+      width: 50%;
     }
   }
   
@@ -23,5 +32,8 @@
   @media (min-width: 1200px) {
     .font1{
         color:gold;
+    }
+    .bannerresponsive{
+      width: 50%;
     }
   }
