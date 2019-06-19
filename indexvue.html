@@ -11,12 +11,75 @@
 </head>
 
 <body>
+    <div id="app">
+        <span> {{mensaje}} </span>
+        <p>{{mensajeMinusculas}}</p>
+        <v-container>
+            <v-layout row wrap>
+                <v-flex xs12>
+                    <div>
+                        <v-btn v-if="visible" color="purple" class="white--text" @click="agregarAlumno('Karen')">Agregar alumno
+                        </v-btn>
+                    </div>
+                </v-flex>
+                <v-flex xs4>
+                    <v-text-field label="Outline" outline v-model="nombrealumno" label="Nombre alumno:">
+                    </v-text-field>
+                </v-flex>
+                <v-flex xs8>
+                    <v-btn color="blue" class="white--text" @click="agregarAlumno2()">Agregar alumno desde
+                        Textfield
+                    </v-btn>
+                </v-flex>
+                <v-flex xs12>
+                    <div>Lista Alumnos: {{ alumnos }}</div>
+                </v-flex>
+            </v-layout>
+        </v-container>
 
+        <v-container>
+                <div v-if="visible">
+                    <v-alert :value="true" class="pink darken-3 white--text">
+                        Mostrar alerta de información
+                    </v-alert>
+                </div>
+                <div v-else>
+                    <v-alert :value="true" class="red white--text">
+                        Mostrar alerta de Error
+                    </v-alert>
+                </div>
+            </v-container>
+    </div>
 
     <script src="vue.js"></script>
     <script src="vuetify.js"></script>
 
     <script type="text/javascript">
+    </script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data: {
+                mensaje:"BUENOS DIAS",
+                alumnos: ["Gonzalo","Marina","Armando"],
+                nombrealumno: "Mario",
+                visible: false,
+
+            },
+            computed: {
+                mensajeMinusculas(){
+                    return this.mensaje.toLowerCase();
+                }
+            },
+            methods: {
+                agregarAlumno(alumno){
+                    this.alumnos.push(alumno);
+                },
+                agregarAlumno2(){
+                    this.alumnos.push(this.nombrealumno);
+                }
+            },
+        });
     </script>
 </body>
 
