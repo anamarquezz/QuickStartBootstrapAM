@@ -11,12 +11,74 @@
 </head>
 
 <body>
+    <div id="app">
+        <h6>{{mensaje}}</h6>
+        <h6>{{mensajeMayusculas}}</h6>
 
+        <v-container>
+            <v-layout row wrap>
+                <v-flex xs12>
+                    <div>
+                        <v-btn v-if="soyVisible" color="purple" class="white--text" @click="AgregarAlumnos('Roberto')">
+                            Agregar alumno
+                        </v-btn>
+                    </div>
+                </v-flex>
+                <v-flex xs4>
+                    <v-text-field label="Outline" outline v-model="nombrealumno" label="Nombre alumno:">
+                    </v-text-field>
+                </v-flex>
+                <v-flex xs8>
+                    <v-btn color="blue" class="white--text" @click="AgregarAlumnosdeTexfield()">Agregar alumno desde
+                        Textfield
+                    </v-btn>
+                </v-flex>
+                <v-flex xs12>
+                    <div>Lista Alumnos: {{ alumnos }}</div>
+                </v-flex>
+            </v-layout>
+        </v-container>
+
+        <v-container>
+            <div v-if="soyVisible">
+                <v-alert :value="true" class="green darken-3 white--text">
+                    Mostrar alerta de información
+                </v-alert>
+            </div>
+            <div v-else>
+                <v-alert :value="true" class="red white--text">
+                    Mostrar alerta de Error
+                </v-alert>
+            </div>
+        </v-container>
+    </div>
 
     <script src="vue.js"></script>
     <script src="vuetify.js"></script>
-
     <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+            data: {
+                mensaje: "Hola mundo con Vue",
+                alumnos: ["Roberto", "Diana", "Andres"],
+                nombrealumno: "",
+                soyVisible: false,
+                informacion: false,
+            },
+            computed: {
+                mensajeMayusculas() {
+                    return this.mensaje.toUpperCase();
+                }
+            },
+            methods: {
+                AgregarAlumnos(alumno) {
+                    this.alumnos.push(alumno);
+                },
+                AgregarAlumnosdeTexfield() {
+                    this.alumnos.push(this.nombrealumno);
+                }
+            }
+        });
     </script>
 </body>
 
