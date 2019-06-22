@@ -13,15 +13,13 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>QUICKSTART GUIDE: Ana Marquez</title>
     <link rel="stylesheet" href="media.css" />
 
 </head>
 
 <body class="gray text--lighten-3">
-    <div class="container">
+    <div class="container" id="app">
 
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <a class="navbar-brand  deep-purple--text text--lighten-3 font-weight-bold" href="#">
@@ -56,171 +54,44 @@
                 <!-- BANNER -->
                 <div class="row">
                     <div class="col-12">
-                        <img src="images/banner.png" alt="Responsive image" class="bannerresponsive">
+                        <img src="images/banner.png" width="820" alt="Responsive image" class="ml-5">
                     </div>
                 </div>
 
 
                 <div class="row mt-5 ml-1">
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                            <img src="images/card1.png" class="card-img-top" alt="">
+                    <div class="col-4" v-for="card in listcards">
+                        <div class="card" style="width: 23rem;">
+                            <img  :src="card.image" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">"Lorem ipsum dolor sit amet</h5>
-                                <p class="card-text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation</p>
-                                <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">Read More</a>
+                                <h5 class="card-title">{{card.title}}</h5>
+                                <p class="card-text">{{card.text}}</p>
+                                <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">{{card.textlink}}</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6  col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                            <img src="images/card2.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">"Lorem ipsum dolor sit amet</h5>
-                                <p class="card-text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation</p>
-                                <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6  col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                            <img src="images/card3.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">"Lorem ipsum dolor sit amet</h5>
-                                <p class="card-text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation</p>
-                                <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
 
                 <div class="row">
-                    <div class="col-12">
-                        <div class="jumbotron jumbotron-fluid ">
-                            <div class="container  purple darken-1 white--text">
-                                <div class="row">
-                                    <div class="col-9">
-                                        <p class="lead">consectetur adipiscing elit, sed do eiusmod.</p>
-                                        <p class="fontjum">Lorem ipsum dolor sit amet</p>
-                                    </div>
-                                    <div class="col mt-lg-5">
-                                        <button type="button"
-                                            class="btn btn-light w-100 font-weight-bold purple--text title text--darken-1">Lorem</button>
+                        <div class="col-12">
+                            <div class="jumbotron jumbotron-fluid ">
+                                <div class="container  purple darken-1 white--text">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <p class="lead">consectetur adipiscing elit, sed do eiusmod.</p>
+                                            <h1 class="display-1">Lorem ipsum dolor sit amet</h1>
+                                        </div>
+                                        <div class="col mt-lg-5">
+                                            <button type="button"
+                                                class="btn btn-light w-100 font-weight-bold purple--text title text--darken-1">Lorem</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="row mt-5 ml-1">
-
-                    <div class="col-12 col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                            <img src="images/card4.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">"Lorem ipsum dolor sit amet</h5>
-                                <p class="card-text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation</p>
-                                <button type="button"
-                                    class="btn btn-light purple darken-1 w-50 font-weight-bold white--text">Lorem</button>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                            <img src="images/card5.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">"Lorem ipsum dolor sit amet</h5>
-                                <p class="card-text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation</p>
-                                <button type="button"
-                                    class="btn btn-light purple darken-1 w-50 font-weight-bold white--text">Lorem</button>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-4">
-                        <div class="card" style="width: 20rem;">
-                            <img src="images/card6.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">"Lorem ipsum dolor sit amet</h5>
-                                <p class="card-text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation</p>
-                                <button type="button"
-                                    class="btn btn-light purple darken-1 w-50 font-weight-bold white--text">Lorem</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                    </div>s
             </div>
         </section>
-        <footer class="page-footer font-small grey darken-4 white--text mt-5 p-2">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-3 mt-3 ">
-                        <h5>Lorem ipsum dolor sit amet</h5>
-                        <p>
-                            onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation
-                        </p>
-                    </div>
-                    <div class="col-3 mt-3">
-                        <h5>Lorem ipsum dolor sit amet</h5>
-                        <p>
-                            onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation
-                        </p>
-                    </div>
-                    <div class="col-3 mt-3">
-                        <h5>Lorem ipsum dolor sit amet</h5>
-                        <p>
-                            onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation
-                        </p>
-                    </div>
-                    <div class="col-3 mt-3">
-                        <ul class="list-inline-item">
-                            <li class="list-inline-item h1">
-                                <i class="fab fa-facebook-square h1"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                <i class="fab fa-twitter-square h1"></i>
-                            </li>
-                            <li class="list-inline-item">
-                                    <i class="fab fa-youtube h1"></i>
-                            </li> 
-                            <li class="list-inline-item">
-                                    <i class="fab fa-instagram h1"></i>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
 
 
@@ -248,6 +119,35 @@
     ></script> -->
     <script src="vue.js"></script>
     <script src="vuetify.js"></script>
+    <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+            data: {
+                listcards:[
+                    {
+                        image:"images/card1.png",
+                        title:"title 1",
+                        text:"text card 1",
+                        textlink:"read more 1"
+                    },
+                    {
+                        image:"images/card2.jpg",
+                        title:"title 2",
+                        text:"text card 1",
+                        textlink:"read more 3"                       
+
+                    },{
+                        image:"images/card3.jpg",
+                        title:"title 3",
+                        text:"text card 3",
+                        textlink:"read more 3"
+
+                    }
+                ]
+            }
+        });
+
+    </script>
 </body>
 
 </html>
