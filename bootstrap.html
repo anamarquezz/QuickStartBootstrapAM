@@ -15,8 +15,8 @@
     <title>Practica Bootstrap</title>
 
 </head>
-<body>
-    <div class="container">
+<body class="grey lighten-3">
+    <div class="container" id="app">
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <a class="navbar-brand  deep-purple--text text--lighten-3 font-weight-bold" href="#">
                 <img src="images/icon.png" width="40" alt="Responsive image">
@@ -54,38 +54,18 @@
             </div>
 
             <div class="row mt-lg-5 ml-lg-1">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4" v-for="carta in listcards">
                     <div class="card" style="width: 23rem;">
-                        <img src="images/card1.png" class="card-img-top" alt="">
+                        <img :src="carta.image" class="card-img-top" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Programador</h5>
-                            <p class="card-text">Texto 1</p>
-                            <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">Leer más</a>
+                            <h5 class="card-title">{{carta.title}}</h5>
+                            <p class="card-text">{{carta.text}}</p>
+                            <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">{{carta.textLink}}</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-4">
-                    <div class="card" style="width: 23rem;">
-                        <img src="images/card2.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Herramientas</h5>
-                            <p class="card-text">Texto 2</p>
-                            <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">Leer más</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-12 col-lg-4">
-                    <div class="card" style="width: 23rem;">
-                        <img src="images/card3.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Inspeccionando</h5>
-                            <p class="card-text">Texto 3</p>
-                            <a href="#" class="font-weight-bold subtitle purple--text text--darken-1">Leer más</a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="row">
@@ -204,5 +184,32 @@
     </script>
     <script src="vue.js"></script>
     <script src="vuetify.js"></script>
+    <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+            data:{
+                listcards:[
+                    {
+                        image:"images/card1.png",
+                        title:"Programador",
+                        text: "Carta 1",
+                        textLink: "READ MORE (1)"
+                    },
+                    {
+                        image:"images/card2.jpg",
+                        title:"Herramientas",
+                        text: "Carta 2",
+                        textLink: "READ MORE (2)"
+                    },
+                    {
+                        image:"images/card3.jpg",
+                        title:"Inspeccionando",
+                        text: "Carta 3",
+                        textLink: "READ MORE (3)"
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 </html>
