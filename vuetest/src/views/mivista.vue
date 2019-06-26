@@ -1,13 +1,13 @@
 <template>
-    <div class="alert alert-primary" role="alert">{{propiedadNueva}}</div>
+    <div class="alert alert-primary" role="alert">Mi Vista</div>
 </template>
 
 <script>
-import { mapState, mapActions} from "vuex";
+import {mapState, mapActions} from "vuex";
 export default {
     name: "mivista",
+    components:{},
     data(){
-
     },
     computed: {
         ...mapState({
